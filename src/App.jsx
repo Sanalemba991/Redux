@@ -1,27 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductListing from "./containers/ProductListing";
-import Header from "./containers/Header";
-import ProductDetails from "./containers/ProductDetails";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Correct import for v6
+
+import Header from "./containers/Header"; // Your Header component
+import ProductDetails from "./containers/ProductDetails"; // Your ProductDetails component
+import "./App.css"; // Your styles
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Routes
-          future={{
-            v7_startTransition: true,
-            v7_relativeSplatPath: true,
-          }}
-        >
-          <Route path="/" element={<ProductListing />} />
-          <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path="*" element={<div>404 Not Found!</div>} />
-        </Routes>
-      </Router>
-    </div>
+  <>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Header/>} /> {/* Main page with list of products */}
+        <Route path="/product/:productId" element={<ProductDetails />} /> {/* Product details page */}
+      </Routes>
+    </Router>
+    </>
   );
 }
 
