@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from './container/Header'
 
 function App() {
   return (
     <div>
-    <h1>Sanalemba</h1> 
+    <Header/>
     </div>
   )
 }
