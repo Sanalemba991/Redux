@@ -1,0 +1,88 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the entire product list */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Style for each individual product card */
+  .product-card {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect for deeper shadow */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  /* Style for the link inside the card */
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Style for the card image */
+  .ui.card .image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Content area of the card */
+  .ui.card .content {
+    padding: 15px;
+  }
+  
+  /* Title styling */
+  .ui.card .content .header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* Price styling */
+  .ui.card .content .meta.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  /* Category styling */
+  .ui.card .content .meta {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Add a subtle border radius to card for a smooth appearance */
+  .ui.card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Add some responsiveness: grid layout for smaller screens */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%; /* Full-width for smaller screens */
+    }
+  }
+  
