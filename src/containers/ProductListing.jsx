@@ -22,6 +22,7 @@ const dispatch=useDispatch();
   useEffect(() => {
     fetchProducts();
   }, []); 
+  console.log("Products:",products)
   return (
     <div className="sam">
       <ProductComponent />
