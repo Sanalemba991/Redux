@@ -8,6 +8,9 @@ function ProductListing() {
   const products = useSelector((state) => state); // or adjust based on your actual state structure
 
   console.log(products);
+  const fetchProducts=async()=>{
+    const response =
+  }
 
   return (
     <div className="sam">
