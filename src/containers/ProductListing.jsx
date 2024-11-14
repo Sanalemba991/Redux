@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Header from "./Header";
+
 import ProductComponent from "./ProductComponent";
 
 function ProductListing() {
@@ -11,8 +11,7 @@ function ProductListing() {
 
   return (
     <div className="sam">
-<ProductComponent/>
-
+      <ProductComponent />
     </div>
   );
 }
